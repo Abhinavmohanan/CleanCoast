@@ -1,0 +1,39 @@
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
+    box-sizing: border-box;
+}
+.clean-coast{
+    margin: 3% 0%;
+    /* margin: 7% 0% 2% 0%; */
+    font-weight: bolder;
+    font-size: 3rem;
+}
+.desc{
+    text-align: justify;
+    display: flex;
+    padding: 0% 20%;
+    font-size: 2rem;
+    justify-content: center;
+}
+.navbar-bg{
+    background-color: #D8FFEC;
+    text-align: start;
+    margin-left: 1%;
+    height: 5%;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.home-page-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.get-start{
+    margin: 50px 0px 50px 0px;
+    position: relative;
+    
+    /* display: none; */
+}
+

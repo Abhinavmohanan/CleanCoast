@@ -1,0 +1,13 @@
+.Footer{
+    background-color: rgb(24, 132, 109);
+    height: 40px;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.statement{
+    font-family:'Courier New', Courier, monospace ;
+    color: aliceblue;
+    text-align: center;
+    padding-top: 10px;
+}

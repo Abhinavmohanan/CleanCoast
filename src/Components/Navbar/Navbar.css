@@ -1,29 +1,35 @@
 .navbar{
-    position:fixed;
-    top: 0;
-    height: 60px;
-    width: 100%;
+  position: relative;
+  background-color: rgba(255,255,255,0.2);
+}
+
+ul {
     display: flex;
-    justify-content: space-between;
-    background-color: rgba(231, 236, 234, 0.193);
-    
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #388087;
+    font-weight: bolder;
+    box-shadow: 2px 2px 25px #388087;
 }
 
 
-.logo{
-    position: fixed;
-    left: 20px;
-    top: 5px;
-    width: 150px;
-    height: 50px;
-    margin-bottom: 5px;
-}
-
-.avatar{
-    position: fixed;
-    top:10px;
-    right: 20px;
-    width: 30px;
-    border-radius: 2rem;
-
-}
+li a {
+    display: block;
+    background-color: #388087;
+    text-align: center;
+    padding: 2%;
+    font-size: 1.7rem;
+    color: whitesmoke;   
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    color: white;
+    background-color: #387050;
+  }

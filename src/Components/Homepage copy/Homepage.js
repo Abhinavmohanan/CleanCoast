@@ -1,7 +1,7 @@
 import React from "react";
 import './Homepage.css';
 import Footer from "../Footer/Footer";
-import { Navbar } from "../Navbar/Navbar";
+import Navbar from '../Navbar/Navbar'
 import { GoogleAuthButton } from "../GoogleAuthButton/GoogleAuthButton";
 function Homepage(){
     const ref = React.useRef(null);

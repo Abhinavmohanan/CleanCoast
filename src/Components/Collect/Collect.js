@@ -29,9 +29,26 @@ export const Collect = () => {
             console.log(image.address)
             if(!image.collected){
                 return(<div className='img-list'>
-                    <img src={image.link} alt="Waste" className='img'/>
+                    <div className='image'><img src={image.link} alt="Waste" className='img'/></div>
                     Location :{image.address}
                 </div>)
+            }else{
+                console.log("Waste collected")
+                return <></>
+            }
+          }))
+        }
+    }  
+    const getMarkers = () => {
+        if(images.length !== 0){
+        return ((images[0]).map((image)=>{
+            console.log(image.address)
+            if(!image.collected){
+                return(<Marker position={[image.coordinate.lat,image.coordinate.lng]}>
+                    <Popup>
+                    A pretty CSS3 popup. <br /> Easily customizable.
+                    </Popup>
+                </Marker>)
             }else{
                 console.log("Waste collected")
                 return <></>
@@ -95,11 +112,7 @@ export const Collect = () => {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[viewState.latitude,viewState.longitude]}>
-                <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-            </Marker>
+            {getMarkers()}
             </MapContainer>
           <div className='map-details'>
                   {getList()}

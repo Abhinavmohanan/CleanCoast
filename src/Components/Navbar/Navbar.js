@@ -1,16 +1,27 @@
-import React from 'react'
-import logo from '../../assets/images/logo.png'
-import profile from '../../assets/images/Profile.jpg'
-import "./Navbar.css"
+import React from "react";
+import "./Navbar.css";
+import { auth } from "../../firebaseConfig";
+import { signOut } from "firebase/auth";
 
-
-function Navbar() {
+const  Navbar = () => {
   return (
-    <div className='navbar'>
-        <img className='logo'  src={logo} alt='cleanzo' />
-        <img className='avatar'   src={profile} alt='profile' />
+    <div className="navbar">
+      <ul>
+        <li>
+          <a href="default.asp">Home</a>
+        </li>
+        <li>
+          <a href="news.asp">See</a>
+        </li>
+        <li>
+          <a href="contact.asp">Report</a>
+        </li>
+        <li>
+          <a onClick={()=>{signOut(auth)}}>Logout</a>
+        </li>
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

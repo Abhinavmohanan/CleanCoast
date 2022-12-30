@@ -13,8 +13,8 @@ import { async } from '@firebase/util';
 
 
 export const Report = () => {
-    const [lng, setLng] = useState(54.37585762735543);
-    const [lat, setLat] = useState(24.45677614934833);
+    const [lng, setLng] = useState(76.083333);
+    const [lat, setLat] = useState(10.466667);
     const [image,setImage] = useState(null);
     const [disabled,setDisabled] = useState(false);
     const [AuthUser] = useContext(AuthUserContext);
@@ -74,13 +74,13 @@ export const Report = () => {
       navigator.geolocation.watchPosition(position=>{
         console.log("Firing")
         console.log(position.coords.latitude)
-          setLat(position.coords.latitude)
-          setLng(position.coords.longitude)})
+          setLat(position.coords.latitude-0.1)
+          setLng(position.coords.longitude+0.5)})
       navigator.geolocation.getCurrentPosition(position=>{
           console.log("Firing")
           console.log(position.coords.latitude)
-            setLat(position.coords.latitude)
-            setLng(position.coords.longitude)
+            setLat(position.coords.latitude-0.1)
+            setLng(position.coords.longitude+0.5)
         })
       },[])
     
@@ -101,7 +101,7 @@ export const Report = () => {
                   initialViewState={{
                   longitude: lng,
                   latitude: lat,
-                  zoom:15
+                  zoom:12
                   }}
                   mapStyle="mapbox://styles/mapbox/streets-v9"
               >

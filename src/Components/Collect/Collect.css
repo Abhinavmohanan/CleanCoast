@@ -34,11 +34,19 @@ body{
     cursor: pointer;
 }
 
-.img{
-    transform: scale(0.6);
+.img-list{
+    display:flex;  
+    align-items: center;
+    margin-bottom: 3rem;
 }
-
-
-.map-details,.img-list{
+.map-details{
     display: flex;
+    height: 10rem;
 }
+
+img{
+    object-fit: cover;
+    height:18rem;     
+    width: 10rem;                                                                                                                                             
+}
+

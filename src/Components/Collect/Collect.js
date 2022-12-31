@@ -47,16 +47,14 @@ export const Collect = () => {
                 return(<Marker position={[image.coordinate.lat,image.coordinate.lng]}>
                     <Popup>
                     A pretty CSS3 popup. <br /> Easily customizable.
-                    </Popup>
-                </Marker>)
-            }else{
-                console.log("Waste collected")
-                return <></>
-            }
-          }))
-        }
-    }  
-    
+                    </Popup>                                               
+                </Marker>)                                                                                                                    
+            }else{                                         
+                console.log("Waste collected")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+          }}))                                                                                                                                                                                                              
+        }                                                  
+    }                                                                                       
+                           
     useEffect(()=>{
         let unsubscribed = false;
 

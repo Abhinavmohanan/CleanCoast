@@ -6,13 +6,15 @@ import { AuthUserContext } from "../../Context/AuthContext";
 function UserProfile(){
     const [AuthUser,] = useContext(AuthUserContext)
 
+    console.log(AuthUser.photoURL);
+
     return(
         <div>
             <Navbar/>          
             <div  className="background">
                 <div className="profile-main">
                         <div className="profile-box">
-                            <img  alt="profile"></img>
+                            <img  alt="profile" src={AuthUser.photoURL}></img>
                                 <div className="data-user-input">
                                     <div className="name">
                                         <div className="name-in">
@@ -37,7 +39,7 @@ function UserProfile(){
                                 </div>
                                 <div className="data-user-input">
                                     <div className="name">
-                                    {AuthUser.name}
+                                    {AuthUser.displayName}
                                     </div>
                                     <div className="name">
                                         3

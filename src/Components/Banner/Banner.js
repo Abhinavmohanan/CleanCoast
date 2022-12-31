@@ -11,7 +11,7 @@ function Banner() {
     <div className='banner'>
         <div className='content'>
             <h1 className='title'>Sail Away the Debries</h1>
-            <h2 className='title2'>Help to keep the maraine ecosystem healthy by using <b className='bold'>Clean Coast</b></h2>
+            <h2 className='title2'>Help to keep the marine ecosystem healthy by using <b className='bold'>Clean Coast</b></h2>
             <div className='banner_button'>
                 
                 {AuthUser == null? <GoogleAuthButton/> : 
